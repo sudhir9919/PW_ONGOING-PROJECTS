@@ -1,0 +1,38 @@
+*{
+    box-sizing: border;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+}
+.navbar{
+    height: 75px;
+}
+ul{
+    display: flex;
+    width: 100%;
+    justify-content:end ;
+    list-style-type: none;
+    gap: 5px;
+    padding: 2px 5px;
+    background-color: pink;
+}
+li{
+    border: 1px solid aquamarine;
+    background: green;
+}
+@media screen and (max-width:450px) {
+    ul{
+        flex-direction: column;
+    }
+    span{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* mobile width - 300 px
+tablet : >360px   <768
+laptop: >768px -> 1024 px */

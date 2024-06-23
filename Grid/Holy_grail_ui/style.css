@@ -1,0 +1,43 @@
+#parent{
+    width: 600px;
+    background-color: teal;
+    padding: 15px;
+    border: 1px solid greenyellow;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: 
+    "header header header header header header"
+    "menu content content content content ads"
+    "menu content content content content ads"
+    "menu content content content content ads"
+    "menu content content content content ads"
+    "footer footer footer footer footer footer";
+    gap: 10px;
+}
+.header{
+    grid-area: header;
+    background-color: antiquewhite;
+    text-align: center;
+    border: 1px solid black;
+}
+#footer{
+    grid-area: footer;
+    background-color: rgb(203, 156, 95);
+    text-align: center;
+    border: 1px solid black;
+}
+.menu{
+    grid-area: menu;
+    background: violet;
+}
+.ads{
+    grid-area: ads;
+    background-color: chartreuse;
+    padding: 20px;
+}
+.content{
+    grid-area: content;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
