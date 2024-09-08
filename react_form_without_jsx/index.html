@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script>
+        const App = () => {
+            return React.createElement(
+                'div', 
+                { className: 'login-container' }, 
+                React.createElement('h2', null, 'Login'),
+                React.createElement(
+                    'form', 
+                    null, 
+                    React.createElement('label', { htmlFor: 'username' }, 'Username:'),
+                    React.createElement('input', { type: 'text', id: 'username', name: 'username' }),
+                    React.createElement('label', { htmlFor: 'password' }, 'Password:'),
+                    React.createElement('input', { type: 'password', id: 'password', name: 'password' }),
+                    React.createElement('button', { type: 'submit' }, 'Submit')
+                )
+            );
+        };
+
+        const rootContainer = document.getElementById('root');
+        const root = ReactDOM.createRoot(rootContainer); // Create a root
+        root.render(React.createElement(App));           // Render the App component
+    </script>
+</body>
+</html>
